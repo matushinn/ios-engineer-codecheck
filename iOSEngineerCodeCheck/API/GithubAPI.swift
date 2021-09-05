@@ -33,32 +33,27 @@ class GitHubAPI {
                 
                 guard let safeData = data else {return}
                 
+//                let decoder = JSONDecoder()
+//                do {
+//                    let decodedData = try decoder.decode(Repositories.self, from: safeData)
+//                    completionHandler(.success(decodedData.items))
+//
+//                } catch  {
+//                    completionHandler(.failure(FetchRepositoryError.parse))
+//                }
                 let decoder = JSONDecoder()
-                do {
-                    let decodedData = try decoder.decode(Repositories.self, from: safeData)
-                    completionHandler(.success(decodedData.items))
-                    
-                } catch  {
-                    completionHandler(.failure(FetchRepositoryError.parse))
-                }
-                /*
-                if let result = try? jsonStrategyDecoder.decode(Repositories.self, from: date) {
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+             
+                if let result = try? decoder.decode(Repositories.self, from: safeData) {
                     completionHandler(.success(result.items))
                 } else {
                     completionHandler(.failure(FetchRepositoryError.parse))
                 }
- */
+ 
             }
             task.resume()
         }
     }
-    
-    static private var jsonStrategyDecoder: JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
-    }
-    
     static func taskCancel() {
         task?.cancel()
     }

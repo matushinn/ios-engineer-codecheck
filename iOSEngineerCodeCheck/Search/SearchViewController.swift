@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import SVProgressHUD
-
+//import SVProgressHUD
 
 class SearchViewController: UITableViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!{
+    @IBOutlet private weak var searchBar: UISearchBar!{
         didSet {
             searchBar.placeholder = "リポジトリを検索できるよ！"
             searchBar.delegate = self
@@ -22,7 +21,6 @@ class SearchViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let nib = UINib(nibName: RepositoryCell.cellIdentifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: RepositoryCell.cellIdentifier)
@@ -93,7 +91,8 @@ extension SearchViewController:UISearchBarDelegate{
         if let word = searchBar.text{
             GitHubAPI.fetchRepository(text: word) { result in
                 DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
+                    //SVProgressHUD.dismiss()
+                    print("relod")
                 }
                 
                 switch result {
