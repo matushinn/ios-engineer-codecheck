@@ -106,7 +106,6 @@
 		371C3E9126E3278300DA4AA1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				BFD945E2244DC5E80012785A /* SearchViewController.swift */,
 				371C3EA126E50DA500DA4AA1 /* SearchViewController.storyboard */,
 			);
 			path = Search;
@@ -115,6 +114,7 @@
 		371C3E9226E32F7800DA4AA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				371C3E9626E3604200DA4AA1 /* API */,
 				371C3E9326E32F8C00DA4AA1 /* Repository.swift */,
 			);
 			path = Model;
@@ -123,7 +123,6 @@
 		371C3E9526E32FD100DA4AA1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				BF0A658C244F2A3B00280FA6 /* DetailViewController.swift */,
 				371C3E9F26E50C2E00DA4AA1 /* DetailViewController.storyboard */,
 			);
 			path = Detail;
@@ -144,6 +143,35 @@
 				371C3E9C26E4C1F800DA4AA1 /* RepositoryCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		379E2F7E26E5F5B100ADF688 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BFD945E7244DC5EB0012785A /* Assets.xcassets */,
+				BFD945EC244DC5EB0012785A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		379E2F7F26E5F5E400ADF688 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFD945E9244DC5EB0012785A /* LaunchScreen.storyboard */,
+				371C3E9126E3278300DA4AA1 /* Search */,
+				371C3E9526E32FD100DA4AA1 /* Detail */,
+				371C3E9A26E4C1D100DA4AA1 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		379E2F8026E5F62E00ADF688 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFD945E2244DC5E80012785A /* SearchViewController.swift */,
+				BF0A658C244F2A3B00280FA6 /* DetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BFD945D2244DC5E80012785A = {
@@ -171,16 +199,12 @@
 		BFD945DD244DC5E80012785A /* iOSEngineerCodeCheck */ = {
 			isa = PBXGroup;
 			children = (
-				371C3E9A26E4C1D100DA4AA1 /* Cell */,
-				371C3E9626E3604200DA4AA1 /* API */,
-				371C3E9526E32FD100DA4AA1 /* Detail */,
 				371C3E9226E32F7800DA4AA1 /* Model */,
-				371C3E9126E3278300DA4AA1 /* Search */,
+				379E2F7F26E5F5E400ADF688 /* Views */,
+				379E2F8026E5F62E00ADF688 /* Controllers */,
+				379E2F7E26E5F5B100ADF688 /* Resources */,
 				BFD945DE244DC5E80012785A /* AppDelegate.swift */,
 				BFD945E0244DC5E80012785A /* SceneDelegate.swift */,
-				BFD945E7244DC5EB0012785A /* Assets.xcassets */,
-				BFD945E9244DC5EB0012785A /* LaunchScreen.storyboard */,
-				BFD945EC244DC5EB0012785A /* Info.plist */,
 			);
 			path = iOSEngineerCodeCheck;
 			sourceTree = "<group>";

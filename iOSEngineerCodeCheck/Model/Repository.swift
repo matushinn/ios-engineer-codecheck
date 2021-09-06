@@ -14,7 +14,6 @@ struct Repositories: Codable {
 }
 
 struct Repository: Codable {
-    let id: Int
     let name: String
     let fullName: String
     let language: String?
@@ -23,8 +22,6 @@ struct Repository: Codable {
     let forksCount: Int
     let openIssuesCount: Int
     let description: String?
-    let homepage: String?
-    let htmlUrl: String?
     
     let owner: Owner
 
@@ -36,7 +33,4 @@ struct Repository: Codable {
 struct Owner: Codable {
     let avatarUrl: String
     let login: String
-    
 }
-
-
